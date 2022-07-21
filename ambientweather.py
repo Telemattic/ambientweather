@@ -44,6 +44,7 @@ def poll_ambientweather(keys):
 
     dt_prev = get_dateutc(prev)
     if dt_prev is not None and dt_curr <= dt_prev:
+        # print(f"AmbientWeather OK - data already up-to-date")
         return 0
 
     cursor = cnx.cursor()

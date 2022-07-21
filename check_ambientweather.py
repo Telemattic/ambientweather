@@ -19,7 +19,7 @@ def check_haversack():
 
     delta = (datetime.datetime.now() - dt).total_seconds()
 
-    interval = 300
+    interval = 60
     (status, ret) = ('OK', 0) if delta < interval * 2 else ('WARNING', 1)
     print(f"AmbientWeather {status} - last {dt.isoformat()} ({delta:.0f}s)")
 
