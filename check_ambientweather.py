@@ -36,7 +36,7 @@ def check_ambientweather():
     details = f"{curr['tempf']:.1f}F / {curr['tempinf']:.1f}F"
 
     interval = 60
-    (status, ret) = ('OK', 0) if delta < interval * 2 else ('WARNING', 1)
+    (status, ret) = ('OK', 0) if delta < interval * 3 else ('WARNING', 1)
     print(f"AmbientWeather {status} - last {dt.astimezone().isoformat()} ({delta:.0f}s) - {details}")
 
     return ret
